@@ -1,0 +1,3 @@
+.email-editor
+    email-block(ng-repeat="email in $ctrl.emails track by $index" ng-class="{'invalid': !email.is_valid}" email="email" on-delete="$ctrl.deleteEmail(email)")
+    input(type='text' placeholder='add more people ...' ng-model='$ctrl.current' ng-keydown="$ctrl.onKeyDown($event)" ng-paste="$ctrl.onPaste($event)" ng-blur="$ctrl.onBlur($event)" autofocus)

@@ -1,0 +1,20 @@
+doctype html
+html(ng-app='app')
+  head
+    title Emails
+    link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
+    link(href="style.css" rel="stylesheet")
+  body(ng-controller='main as main')
+    .body
+      span#header Share "Board name" with others
+      email-editor(emails="main.emails")
+    .buttons
+      button.primary-btn(ng-click="main.addEmail()") Add email
+      button.primary-btn(ng-click="main.showCount()") Get emails count
+    script(src="vendor/angular/angular.min.js")
+    script(src="app/app.module.js")
+    script(src="app/app.controller.js")
+    script(src="app/common/common.module.js")
+    script(src="app/common/emailEditor/email.factory.js")
+    script(src="app/common/emailEditor/emailEditor.component.js")
+    script(src="app/common/emailEditor/emailBlock/emailBlock.component.js")
