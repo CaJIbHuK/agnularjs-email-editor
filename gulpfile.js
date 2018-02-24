@@ -42,7 +42,8 @@ gulp.task('vendor', ['clean'], function () {
 
   let files = [
     ['node_modules/angular/angular.min.js', 'vendor/angular'],
-    ['node_modules/angular/angular.min.js.map', 'vendor/angular']
+    ['node_modules/angular/angular.min.js.map', 'vendor/angular'],
+    ['vendor/**/*', 'vendor/'],
   ];
   let options = {cwd : dist, overwrite : true};
 

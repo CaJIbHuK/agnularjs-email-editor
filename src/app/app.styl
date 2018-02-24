@@ -1,13 +1,19 @@
+@font-face
+  font-family MyriadPro
+  font-style normal
+  src url(vendor/fonts/MyriadPro-Regular.otf)
+
 body
   width 100%
   height 100%
-  font-family sans-serif
+  font-family MyriadPro
+  //font-family: 'PT Sans', sans-serif;
   display block
   margin 0
   padding 0
 
   .body
-    padding 35px 40px 30px 40px
+    padding 33px 40px 30px 40px
     background #f5f5f5
 
     #header
@@ -27,11 +33,15 @@ body
       &:last-child
         margin-right 0
 
-button.primary-btn
-  display inline-block
-  padding 0 10px 0 10px
-  min-width 100px
-  min-height 30px
-  color white
-  border none
-  background #6699ff
+button
+  &.btn
+    font-size MyriadPro
+    display inline-block
+    padding 0 10px 0 10px
+    min-width 100px
+    min-height 30px
+    border none
+
+    &.primary-btn
+      color white
+      background #6699ff
