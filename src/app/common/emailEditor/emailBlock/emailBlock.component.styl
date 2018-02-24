@@ -1,13 +1,12 @@
 email-block
-  display inline-block
+  display inline-flex
   margin 5px
   background #d8e7fe
-  font-family sans-serif
   white-space nowrap
   max-width 90%
   padding 4px 8px 4px 8px
   border-radius 100px
-  font-size 13px
+  font-size 14px
 
   &.invalid
     border-bottom dotted
@@ -15,11 +14,11 @@ email-block
     border-radius 0
     background white
   span
-    display inline-block
     text-overflow ellipsis
     overflow hidden
     max-width 100%
     &.delete-email-btn
+      overflow inherit
       font-style normal
       cursor pointer
       margin-left 5px

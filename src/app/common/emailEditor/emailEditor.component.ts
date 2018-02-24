@@ -45,13 +45,14 @@ angular.module('common')
         let conditions = [
           {condition: () => event.keyCode === 13, action: addCurrent}, // enter key pressed
           {condition: () => [','].indexOf(event.key) !== -1, action: addCurrent}, // comma char is entered
-          {condition: () => event.keyCode === 8 && !this.current, action: deleteLast}, // backspace with empty input
+          {condition: () => event.keyCode === 8 && !this.current.length, action: deleteLast}, // backspace with empty input
+          {condition: () => event.keyCode === 32 && !this.current.length, action: null}  // prevent space char on line start
         ];
 
         let triggered = conditions.find(c => c.condition());
         if (triggered) {
           event.preventDefault();
-          triggered.action();
+          triggered.action && triggered.action();
         }
       }
     }
